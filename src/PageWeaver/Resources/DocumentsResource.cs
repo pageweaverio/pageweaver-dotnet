@@ -14,14 +14,14 @@ public sealed class WaitOptions
     /// <summary>Initial delay between polls. Default 1s.</summary>
     public TimeSpan IntervalMs { get; set; } = TimeSpan.FromSeconds(1);
 
-    /// <summary>Cap the (backing-off) poll delay. Default 60s.</summary>
-    public TimeSpan MaxIntervalMs { get; set; } = TimeSpan.FromSeconds(60);
+    /// <summary>Cap the (backing-off) poll delay. Default 5s.</summary>
+    public TimeSpan MaxIntervalMs { get; set; } = TimeSpan.FromSeconds(5);
 
     /// <summary>Multiplier applied to the delay after each poll. Default 1.5.</summary>
     public double Backoff { get; set; } = 1.5;
 
-    /// <summary>Give up after this long. Default 5min.</summary>
-    public TimeSpan Timeout { get; set; } = TimeSpan.FromMinutes(5);
+    /// <summary>Give up after this long. Default 60s.</summary>
+    public TimeSpan Timeout { get; set; } = TimeSpan.FromSeconds(60);
 
     /// <summary>Throw <see cref="PageWeaverDocumentFailedException"/> if the document fails. Default true.</summary>
     public bool ThrowOnFailure { get; set; } = true;
