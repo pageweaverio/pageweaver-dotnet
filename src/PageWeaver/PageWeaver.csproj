@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>PageWeaver</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>PageWeaver</Authors>
+    <Description>Official .NET SDK for the PageWeaver PDF generation API.</Description>
+    <PackageProjectUrl>https://pageweaver.io</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pageweaverio/pageweaver-dotnet</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>pageweaver;pdf;pdf-generation;sdk;api-client</PackageTags>
+  </PropertyGroup>
+
+</Project>
