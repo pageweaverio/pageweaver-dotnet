@@ -46,10 +46,15 @@ public sealed class ProposalsResource
     /// <summary>POST /v1/templates/{templateId}/proposals/{proposalId}/checks. Re-run the render-diff regression.</summary>
     public Task<Dictionary<string, JsonElement>> RerunChecksAsync(
         string templateId, string proposalId, CancellationToken ct = default)
+        => RerunChecksAsync(templateId, proposalId, null, ct);
+
+    /// <summary>POST /v1/templates/{templateId}/proposals/{proposalId}/checks. Re-run with an optional policy body.</summary>
+    public Task<Dictionary<string, JsonElement>> RerunChecksAsync(
+        string templateId, string proposalId, object? body, CancellationToken ct = default)
         => _http.RequestJsonAsync(
             HttpMethod.Post,
             $"/v1/templates/{PageWeaverHttp.Enc(templateId)}/proposals/{PageWeaverHttp.Enc(proposalId)}/checks",
-            null, null, ct);
+            body, null, ct);
 
     /// <summary>POST /v1/templates/{templateId}/proposals/{proposalId}/approve. Append an approval decision.</summary>
     public Task<Dictionary<string, JsonElement>> ApproveAsync(
